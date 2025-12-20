@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.logo span {
+  font-size: 28px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.divider {
+  height: 1px;
+  width: calc(100% - 120px);  
+  background: rgba(255,255,255,0.3);
+  margin: 0 auto 60px;
+}
+
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px 120px;
+}
+
+.subtitle {
+  font-weight: 700;
+  letter-spacing: 2px;
+}/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+
+.subtitle.red {
+  color: #b30000;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle.white {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+/* IMAGE PLACEHOLDER */
+.title-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-image {
+  max-width: 90%;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(180, 0, 0, 0.6));
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+.divider {
+    width: calc(100% - 40px);
+  }
+    .contact-wrapper,
+  .footer-top {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nav a {
+    margin: 0 12px;
+  }
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+  .subtitle.red {
+    font-size: 22px;
+  }
+}
+
+
+
+
+/* SECTION */
+.about-section {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.95) 0%,
+    rgba(0,0,0,0.85) 45%,
+    rgba(0,0,0,0.2) 100%
+  );
+}
+
+/* TEXT */
+.about-text {
+  width: 55%;
+  padding: 80px 70px;
+}
+
+.label {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+.red {
+  color: #b30000;
+}
+
+.about-text h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 18px;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+blockquote {
+  margin-top: 30px;
+  font-style: italic;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.85;
+}
+
+/* IMAGE */
+.about-image {
+  position: absolute;
+  inset: 0;                 /* top:0 right:0 bottom:0 left:0 */
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+   top: 120px;          /* 👈 pushes image downward */
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  z-index: 1;
+}
+
+.about-image img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  opacity: 0.25;            /* subtle background look */
+}
+
+
+/* .about-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.9)
+  );
+  z-index: 1;
+} */
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+  }
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text {
+    padding: 50px 30px;
+  }
+
+  .about-text h1 {
+    font-size: 32px;
+  }
+}
+
+/*epS and albums*/
+.albums-section {
+  padding: 80px 60px 120px;
+}
+
+/* TITLE */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(255,255,255,0.3);
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px 60px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+/* CARD */
+.album-card img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+.album-card {
+  border: 1px solid rgba(255, 255, 255, 0.4); /* white box line */
+  padding: 24px;
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+}
+.album-card:hover {
+  border-color: #fff;
+}
+
+
+.album-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.album-card p {
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .albums-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .albums-section {
+    padding: 60px 30px;
+  }
+
+  .albums-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+/*CONTACT SECTION*/
+.contact-wrapper {
+  display: flex;
+  min-height: 100vh;
+  padding: 90px 80px;
+}
+
+/* LEFT */
+.contact-left {
+  width: 45%;
+}
+
+.pill {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.contact-left h1 {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*//*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+.red {
+  color: #b30000;
+}
+
+.contact-left p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+.email {
+  color: #b30000;
+}
+
+/* RIGHT */
+.contact-right {
+  width: 55%;
+}
+
+form {
+  max-width: 520px;
+  margin-left: auto;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin: 22px 0 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon .icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #0aa;
+}
+
+.count {
+  text-align: right;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 6px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+button {
+  margin-top: 34px;
+  padding: 14px 28px;
+  background: #b30000;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 60px 30px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  form {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+/* FOOTER */
+.footer {
+  background: linear-gradient(to top, #1a1a1a, #000);
+  padding-top: 80px;
+}
+
+/* TOP */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px 60px;
+}
+
+/* BRAND */
+.footer-brand {
+  max-width: 320px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+.brand-logo {
+  font-weight: 900;
+  line-height: 1;
+}
+
+.brand-logo .red {
+  color: #b30000;
+  font-size: 28px;
+}
+
+.brand-logo .white {
+  font-size: 42px;
+}
+
+.tagline {
+  color: #b30000;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 8px 0 30px;
+}
+
+.artist {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.artist-line {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 70px;
+}
+
+.column h4 {
+  font-size: 13px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+.column a {
+  display: block;
+  font-size: 15px;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.developed p {
+  font-size: 15px;
+  color: #ccc;
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+/* }.developed p {
+  display: flex;
+  align-items: center;
+  gap: 6px;              
+} */
+
+.developed span {
+  color: #b30000;
+  font-size: 18px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 18px 80px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 40px 50px;
+  }
+
+  .footer-links,
+  .footer-right {
+    gap: 40px;
+  }
+/*
+author: @karshSecurities
+insta: @karshsecurities
+*/
+  .footer-bottom {
+    padding: 16px 40px;
+  }
+}
