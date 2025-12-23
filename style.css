@@ -189,7 +189,7 @@ blockquote {
   z-index: 1;
   display: flex;
   justify-content: flex-end;
-   top: 120px;          /* 👈 pushes image downward */
+   top: 200px;          /* 👈 pushes image downward */
   right: 0;
   bottom: 40px;
   left: 0;
@@ -587,3 +587,4 @@ insta: @karshsecurities
     padding: 16px 40px;
   }
 }
+
